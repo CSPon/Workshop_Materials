@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 
-int main(void)
+int main_2(void)
 {
 	int i;
 

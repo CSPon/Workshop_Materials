@@ -81,6 +81,7 @@
     <ClCompile Include="Works_000.c" />
     <ClCompile Include="Works_001.c" />
     <ClCompile Include="Works_002.c" />
+    <ClCompile Include="Works_003.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
