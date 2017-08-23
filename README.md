@@ -1,3 +1,6 @@
 # Workshop Material Files
 ---
-Arduino materials will be fixed to comply with C89 Standards...slowly
+Refer to Workshop_Materials.xlsx to see the list of available files and their numbers!
+
+This repository contains everything from basic Python Intro to Arduino; it also contains some minor C programming as well as
+Eagle CAD design tutorials.
