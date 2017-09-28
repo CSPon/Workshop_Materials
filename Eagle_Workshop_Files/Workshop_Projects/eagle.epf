@@ -382,10 +382,10 @@ UsedLibrary="D:/EAGLE FILES/LIBRARIES/SparkFun/User-Submitted.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="1920 3 3839 1019"
+Loc="-8 -8 1911 1008"
 State=1
 Number=0
 
 [Desktop]
-Screen="3840 2163"
+Screen="5760 1082"
 Window="Win_1"

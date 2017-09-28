@@ -193,6 +193,9 @@
 <text x="1.27" y="11.43" size="2.54" layer="94">Document Number:</text>
 <text x="17.78" y="19.05" size="2.54" layer="94">&gt;DRAWING_NAME</text>
 </symbol>
+<symbol name="LETTER_P" library_version="1">
+<frame x1="0" y1="0" x2="185.42" y2="248.92" columns="12" rows="17" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LETTER_L" prefix="FRAME" uservalue="yes" library_version="1">
@@ -201,6 +204,21 @@ LETTER landscape</description>
 <gates>
 <gate name="G$1" symbol="LETTER_L" x="0" y="0"/>
 <gate name="G$2" symbol="DOCFIELD" x="147.32" y="0" addlevel="must"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LETTER_P" prefix="FRAME" uservalue="yes" library_version="1">
+<description>&lt;b&gt;FRAME&lt;/b&gt;&lt;p&gt;
+LETTER portrait</description>
+<gates>
+<gate name="G$1" symbol="LETTER_P" x="0" y="0"/>
+<gate name="G$2" symbol="DOCFIELD" x="83.82" y="0" addlevel="must"/>
 </gates>
 <devices>
 <device name="">
@@ -11811,14 +11829,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </classes>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
-<part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="-MMSZ5232BS" value="4.1V"/>
+<part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="-MMSZ5232BS" value="?V"/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-SS14" value=""/>
 <part name="D4" library="SparkFun-LED" deviceset="LED-WHITE" device="1206" value="WHITE"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_02" device="4UCON-15767"/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="U1" library="SparkFun-Retired" deviceset="ATTINY45" device="TINY85-20-DIP" value="TINY85-20-DIP"/>
+<part name="U1" library="SparkFun-Retired" deviceset="ATTINY45" device="TINY85-20-DIP" value="ATTINY85"/>
 <part name="Y1" library="SparkFun-Clocks" deviceset="RESONATOR-8MHZ" device="SMD_3.2X1.3" value="8MHz"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="AVR_SPI_PROG_3X2" device="PTH" value="AVR SPI PROG 3X2PTH"/>
@@ -11883,6 +11901,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND15" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND16" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_P" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11974,9 +11993,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U1" gate="G$1" x="157.48" y="167.64"/>
 <instance part="Y1" gate="G$1" x="73.66" y="175.26" rot="R270"/>
 <instance part="GND2" gate="1" x="60.96" y="175.26" rot="R270"/>
-<instance part="J2" gate="G$1" x="106.68" y="172.72"/>
-<instance part="GND3" gate="1" x="127" y="170.18" rot="R90"/>
-<instance part="SUPPLY3" gate="G$1" x="124.46" y="175.26" rot="R270"/>
+<instance part="J2" gate="G$1" x="114.3" y="172.72" smashed="yes" rot="MR0">
+<attribute name="NAME" x="119.38" y="178.308" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="129.54" y="165.354" size="1.778" layer="96" font="vector" rot="MR0"/>
+</instance>
+<instance part="GND3" gate="1" x="93.98" y="170.18" rot="MR90"/>
+<instance part="SUPPLY3" gate="G$1" x="96.52" y="175.26" rot="MR270"/>
 <instance part="C1" gate="G$1" x="139.7" y="170.18" rot="MR0"/>
 <instance part="GND4" gate="1" x="139.7" y="157.48"/>
 <instance part="SUPPLY4" gate="G$1" x="139.7" y="177.8" rot="R90"/>
@@ -12018,7 +12040,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND13" gate="1" x="5.08" y="78.74"/>
 <instance part="D11" gate="G$1" x="45.72" y="86.36" rot="R90"/>
 <instance part="R4" gate="G$1" x="40.64" y="91.44"/>
-<instance part="R5" gate="G$1" x="33.02" y="175.26"/>
+<instance part="R5" gate="G$1" x="33.02" y="175.26" smashed="yes">
+<attribute name="NAME" x="31.75" y="176.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="29.21" y="171.958" size="1.778" layer="96"/>
+</instance>
 <instance part="GND14" gate="1" x="50.8" y="170.18" rot="R90"/>
 <instance part="SUPPLY9" gate="G$1" x="50.8" y="93.98"/>
 <instance part="U2" gate="G$1" x="76.2" y="91.44"/>
@@ -12048,7 +12073,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="116.84" y1="175.26" x2="124.46" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="175.26" x2="96.52" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
@@ -12101,7 +12126,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="6"/>
-<wire x1="116.84" y1="170.18" x2="124.46" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="170.18" x2="96.52" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -12246,8 +12271,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="5"/>
-<wire x1="99.06" y1="170.18" x2="91.44" y2="170.18" width="0.1524" layer="91"/>
-<label x="91.44" y="170.18" size="1.778" layer="95"/>
+<wire x1="121.92" y1="170.18" x2="129.54" y2="170.18" width="0.1524" layer="91"/>
+<label x="129.54" y="170.18" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="D5" gate="G$1" pin="A"/>
@@ -12299,8 +12324,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="MISO" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="175.26" x2="91.44" y2="175.26" width="0.1524" layer="91"/>
-<label x="91.44" y="175.26" size="1.778" layer="95"/>
+<wire x1="121.92" y1="175.26" x2="129.54" y2="175.26" width="0.1524" layer="91"/>
+<label x="129.54" y="175.26" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB1(MISO)"/>
@@ -12310,8 +12335,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="SCK" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
-<wire x1="99.06" y1="172.72" x2="91.44" y2="172.72" width="0.1524" layer="91"/>
-<label x="91.44" y="172.72" size="1.778" layer="95"/>
+<wire x1="121.92" y1="172.72" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
+<label x="129.54" y="172.72" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB2(SCK/ADC1)"/>
@@ -12331,8 +12356,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="MOSI" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="4"/>
-<wire x1="116.84" y1="172.72" x2="124.46" y2="172.72" width="0.1524" layer="91"/>
-<label x="119.38" y="172.72" size="1.778" layer="95"/>
+<wire x1="104.14" y1="172.72" x2="96.52" y2="172.72" width="0.1524" layer="91"/>
+<label x="101.6" y="172.72" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB0(MOSI)"/>
@@ -12593,10 +12618,80 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 </nets>
 </sheet>
+<sheet>
+<plain>
+<text x="2.54" y="246.38" size="1.778" layer="91">Fig. 1</text>
+<text x="2.54" y="243.84" size="1.778" layer="91">-Which Circuit Design Rule Can We Apply?</text>
+<text x="2.54" y="226.06" size="1.778" layer="91">Fig. 2
+-What is the type of the diode(D1)?
+
+
+-If we want VREF of 3.3V, what should be our Zener Voltage should be(Ignore voltage drop through R5)?</text>
+<text x="2.54" y="215.9" size="1.778" layer="91">Fig. 3
+-Which Circuit Design Rule Does the Figure Violate?</text>
+<text x="2.54" y="205.74" size="1.778" layer="91">Fig. 4
+-Which Circuit Design Rule Does the Figure Violate?</text>
+<text x="2.54" y="187.96" size="1.778" layer="91">Fig. 5
+-Which Circuit Design Rule Does the Figure Violate?
+
+
+-List Any Common Sub-Circuit</text>
+<text x="2.54" y="160.02" size="1.778" layer="91">Fig. 6
+- Which Circuit Design Rule Does the Figure Violate?
+
+
+-What type of diode is D5?
+
+
+-What type of switch is S1?</text>
+<text x="2.54" y="149.86" size="1.778" layer="91">Fig. 7
+-Which Circuit Design Rule Does the Figure Violate?</text>
+<text x="2.54" y="137.16" size="1.778" layer="91">Fig. 8
+-What is Missing in The Figure?</text>
+<text x="2.54" y="124.46" size="1.778" layer="91">Fig. 9
+-What Common Sub-Circuit is Used in The Figure?</text>
+<text x="2.54" y="111.76" size="1.778" layer="91">Fig. 10
+-What Type of Diodie is Used?</text>
+<text x="2.54" y="99.06" size="1.778" layer="91">Fig. 11 and 12
+-(True or False) Figure 11 and 12 has full connection for all isolated nets</text>
+<text x="2.54" y="63.5" size="1.778" layer="91">Fig. 13
+-List Diode and Their Type(s)
+
+
+-What Type of Fuse is F1?
+
+
+-If We Want Short-Cirtcuit Protection for 12V Output, Which Component Should We Use?
+
+
+-Where Would We Place that Component at?</text>
+<text x="2.54" y="43.18" size="1.778" layer="91">Fig. 14
+-What Common Sub-Circuit is Used in The Figure?
+
+-For Q1~Q4, Define Type of Transistor and Their Type
+(That is, if BJT, is it NPN/PNP, or if it is FET, is it P-Channel/N-Channel?)</text>
+<text x="2.54" y="25.4" size="1.778" layer="91">Extra Points
+-On the Schematic, Label Anything That is Missing.
+(Resistance, Capacitance, Missing Net Label, etc.)
+Write them on the Schematic Sheet.</text>
+</plain>
+<instances>
+<instance part="FRAME2" gate="G$1" x="0" y="0"/>
+<instance part="FRAME2" gate="G$2" x="83.82" y="0"/>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
 </sheets>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, Eagle supports online libraries. The ids
 of those online libraries will not be understood (or retained)
